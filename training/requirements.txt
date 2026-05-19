@@ -1,0 +1,9 @@
+numpy
+pandas
+matplotlib
+seaborn
+keras>=3.0
+tensorflow>=2.15
+scikit-learn
+xgboost
+nltk
