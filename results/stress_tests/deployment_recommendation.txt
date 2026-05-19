@@ -1,7 +1,0 @@
-RECOMMENDED MODEL: FINAL
-Composite — Best: 0.7450 | Final: 0.8211
-Avg Acc   — Best: 0.9175 | Final: 0.9368
-Avg F1    — Best: 0.9080 | Final: 0.9308
-Wins      — Best: 2 | Final: 10 | Ties: 15
-
-The FINAL model was trained on ALL data (train+val combined), giving it maximum exposure to disease patterns. It is the recommended choice for production deployment.

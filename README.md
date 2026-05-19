@@ -97,36 +97,6 @@ The system runs both models simultaneously and selects the prediction with highe
 
 ---
 
-## Key Results
-
-### Symptom Model (41 classes, 5-Fold CV)
-
-| Metric | Value |
-|--------|-------|
-| Test Accuracy | 99.97% ± 0.03% |
-| Macro F1 | 99.97% ± 0.03% |
-| ROC AUC | 1.0000 ± 0.0000 |
-| Top-3 Accuracy | 100.00% |
-| ECE (Calibration) | 0.0004 ± 0.0002 |
-| Acute Sensitivity | 100.00% |
-
-### NLP Model (55 classes, 5-Fold CV)
-
-| Metric | Value |
-|--------|-------|
-| Test Accuracy | 93.91% ± 0.96% |
-| Macro F1 | 90.64% ± 1.53% |
-| ROC AUC | 99.76% ± 0.07% |
-| Top-3 Accuracy | 98.66% ± 0.44% |
-| ECE (Calibration) | 0.0330 ± 0.0074 |
-| Acute Sensitivity | 97.48% ± 0.52% |
-
-### Deployment Recommendation
-
-The **Final model** (retrained on all train+val data) is recommended for production, winning 10 out of 27 stress tests vs 2 for the best-fold model (15 ties).
-
----
-
 ## Repository Structure
 
 ```
@@ -148,16 +118,10 @@ multimodal-disease-prediction/
 │   ├── symbipredict_2022.csv      ← Structured symptoms (4961 samples, 41 classes)
 │   └── bert_train.csv             ← Free-text NLP data (6833 samples, 55 classes)
 │
-├── inference/                     ← FastAPI Inference API (source code)
-│   ├── app.py                     ← Dual-model inference server
-│   ├── Dockerfile                 ← HF Spaces deployment
-│   └── requirements.txt
-│
-└── results/                       ← Experimental Results
-    ├── nlp_model/
-    │   ├── figures/               ← Confusion matrices, ROC, reliability diagrams
-    │   └── metrics/               ← Classification reports, fold metrics
-    └── stress_tests/              ← Robustness evaluation (27 tests)
+└── inference/                     ← FastAPI Inference API (source code)
+    ├── app.py                     ← Dual-model inference server
+    ├── Dockerfile                 ← HF Spaces deployment
+    └── requirements.txt
 ```
 
 ---
