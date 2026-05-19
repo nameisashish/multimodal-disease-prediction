@@ -1,18 +1,12 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite it as below."
 title: "A Multimodal Deep Learning Framework for Symptom-Based Disease Prediction and Clinical Decision Support"
+type: software
 authors:
   - family-names: "Kishore"
     given-names: "Ashish"
-# Uncomment and fill in after publication:
-# doi: "10.1007/xxxxx-xxx-xxxxx-x"
-# url: "https://doi.org/10.1007/xxxxx-xxx-xxxxx-x"
-journal: "Neural Computing and Applications"
-publisher: "Springer"
-year: 2026
 repository-code: "https://github.com/nameisashish/multimodal-disease-prediction"
 license: MIT
-type: article
 keywords:
   - medical chatbot
   - disease prediction
@@ -20,9 +14,12 @@ keywords:
   - NLP
   - symptom analysis
   - clinical decision support
-  - DenseNet
-  - BiLSTM
-  - attention mechanism
-  - calibration
   - multimodal learning
-  - neural computing
+preferred-citation:
+  type: article
+  title: "A Multimodal Deep Learning Framework for Symptom-Based Disease Prediction and Clinical Decision Support"
+  authors:
+    - family-names: "Kishore"
+      given-names: "Ashish"
+  journal: "Neural Computing and Applications"
+  year: 2026

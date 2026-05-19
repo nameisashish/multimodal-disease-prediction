@@ -146,9 +146,7 @@ multimodal-disease-prediction/
 │
 ├── data/                          ← Datasets
 │   ├── symbipredict_2022.csv      ← Structured symptoms (4961 samples, 41 classes)
-│   ├── bert_train.csv             ← Free-text NLP data (6833 samples, 55 classes)
-│   ├── Symptom2Disease.csv        ← Symptom-to-disease mapping
-│   └── dataset.csv                ← Multi-column symptom data
+│   └── bert_train.csv             ← Free-text NLP data (6833 samples, 55 classes)
 │
 ├── inference/                     ← FastAPI Inference API (source code)
 │   ├── app.py                     ← Dual-model inference server
@@ -252,8 +250,6 @@ FastAPI dual-model inference server deployed on Hugging Face Spaces.
 |---------|---------|----------|---------|-------------|
 | `symbipredict_2022.csv` | 4,961 | 132 binary symptoms | 41 | Pre-balanced structured symptom data (121/class) |
 | `bert_train.csv` | 6,833 | Free-text descriptions | 55 | Natural language symptom descriptions |
-| `Symptom2Disease.csv` | 1,200 | Symptom-disease pairs | — | Symptom-to-disease mapping reference |
-| `dataset.csv` | 4,920 | 17 symptom columns | — | Multi-column symptom format |
 
 > **Note:** `symbipredict_2022.csv` contains trailing spaces in `"Diabetes "` and `"Hypertension "` — this is intentional and handled in the training code.
 
