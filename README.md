@@ -112,16 +112,22 @@ multimodal-disease-prediction/
 │   ├── 04_nlp_model.py           ← NLP model (CNN+BiLSTM+Attn)
 │   ├── 05_nlp_benchmarks.py      ← Baselines (CNN, XGBoost, GRU+Attn)
 │   ├── 06_generative_eval.py     ← Clinical evaluation framework
+│   ├── 07_symptom_deployment_prep.ipynb  ← Deployment model (single run)
 │   └── requirements.txt
 │
 ├── data/                          ← Datasets
 │   ├── symbipredict_2022.csv      ← Structured symptoms (4961 samples, 41 classes)
 │   └── bert_train.csv             ← Free-text NLP data (6833 samples, 55 classes)
 │
-└── inference/                     ← FastAPI Inference API (source code)
-    ├── app.py                     ← Dual-model inference server
-    ├── Dockerfile                 ← HF Spaces deployment
-    └── requirements.txt
+├── inference/                     ← FastAPI Inference API (source code)
+│   ├── app.py                     ← Dual-model inference server
+│   ├── Dockerfile                 ← HF Spaces deployment
+│   └── requirements.txt
+│
+└── stress_test/                   ← Deployment Model Validation
+    └── symptom_model/
+        ├── stress_test.ipynb      ← 12 clinical robustness tests
+        └── results/               ← Test outputs + deployment recommendation
 ```
 
 ---

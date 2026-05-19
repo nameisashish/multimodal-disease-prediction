@@ -1,0 +1,7 @@
+a,b,a_t1,a_t3,b_t1,b_t3
+Diabetes ,Hypertension ,1.0,1.0,0.0,0.82
+Malaria,Typhoid,0.0,1.0,1.0,1.0
+Pneumonia,Bronchial Asthma,1.0,1.0,0.0,0.93
+Dengue,Malaria,1.0,1.0,0.0,1.0
+Hepatitis B,Hepatitis C,1.0,1.0,0.0,1.0
+GERD,Peptic Ulcer Disease,0.94,0.95,0.06,0.35
