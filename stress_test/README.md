@@ -4,8 +4,6 @@ Robustness validation of trained models before deployment.
 
 ## Symptom Model
 
-**Code:** [`symptom_model/stress_test.ipynb`](symptom_model/stress_test.ipynb)
-
 12 clinical stress tests designed the way a doctor validates a diagnostic AI:
 
 | Test | Name | What It Does |
