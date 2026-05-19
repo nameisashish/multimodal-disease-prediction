@@ -126,7 +126,6 @@ multimodal-disease-prediction/
 │
 └── stress_test/                   ← Deployment Model Validation
     └── symptom_model/
-        ├── stress_test.ipynb      ← 12 clinical robustness tests
         └── results/               ← Test outputs + deployment recommendation
 ```
 
