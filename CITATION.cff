@@ -1,18 +1,18 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite it as below."
-title: "AyuSeva: AI-Powered Medical Diagnosis Chatbot with Dual-Model Inference"
+title: "A Multimodal Deep Learning Framework for Symptom-Based Disease Prediction and Clinical Decision Support"
 authors:
   - family-names: "Kishore"
     given-names: "Ashish"
 # Uncomment and fill in after publication:
-# doi: "10.xxxx/xxxxx"
-# url: "https://doi.org/10.xxxx/xxxxx"
-# journal: "Journal Name"
-# conference: "Conference Name"
-# year: 2026
-repository-code: "https://github.com/nameisashish/ayuseva"
+# doi: "10.1007/xxxxx-xxx-xxxxx-x"
+# url: "https://doi.org/10.1007/xxxxx-xxx-xxxxx-x"
+journal: "Neural Computing and Applications"
+publisher: "Springer"
+year: 2026
+repository-code: "https://github.com/nameisashish/multimodal-disease-prediction"
 license: MIT
-type: software
+type: article
 keywords:
   - medical chatbot
   - disease prediction
@@ -24,3 +24,5 @@ keywords:
   - BiLSTM
   - attention mechanism
   - calibration
+  - multimodal learning
+  - neural computing

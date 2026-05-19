@@ -1,16 +1,17 @@
 <div align="center">
 
-# 🏥 AyuSeva
+# A Multimodal Deep Learning Framework for Symptom-Based Disease Prediction and Clinical Decision Support
 
-### AI-Powered Medical Diagnosis Chatbot with Dual-Model Inference
-
-[![Live Demo](https://img.shields.io/badge/🌐_Live_Demo-ayuseva.vercel.app-blue?style=for-the-badge)](https://ayuseva.vercel.app)
+[![Published in NCAA](https://img.shields.io/badge/Published_in-Neural_Computing_and_Applications-blue?style=for-the-badge)](https://doi.org/PLACEHOLDER)
+[![Live Demo](https://img.shields.io/badge/🌐_Live_Demo-ayuseva.vercel.app-brightgreen?style=for-the-badge)](https://ayuseva.vercel.app)
 [![API](https://img.shields.io/badge/🤗_API-Hugging_Face_Spaces-yellow?style=for-the-badge)](https://huggingface.co/spaces/theashish03/medical-assistant-api)
 [![Models](https://img.shields.io/badge/🧠_Models-Hugging_Face-orange?style=for-the-badge)](https://huggingface.co/spaces/theashish03/medical-assistant-api/tree/main/models)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
 [![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
 
-**A dual-model medical diagnosis system combining structured symptom analysis with natural language understanding, featuring calibrated predictions, cost-sensitive evaluation, and a full-stack deployment pipeline.**
+**Official implementation of the paper accepted at *Neural Computing and Applications* (Springer).**
+
+A dual-model medical diagnosis system combining structured symptom analysis with natural language understanding, featuring calibrated predictions, cost-sensitive evaluation, and a full-stack deployment pipeline.
 
 [Live Demo](https://ayuseva.vercel.app) · [API Docs](https://huggingface.co/spaces/theashish03/medical-assistant-api) · [Trained Models](https://huggingface.co/spaces/theashish03/medical-assistant-api/tree/main/models) · [Paper](#citation)
 
@@ -35,14 +36,16 @@
 
 ## Overview
 
-AyuSeva is a medical diagnosis chatbot that uses two complementary deep learning models:
+This repository contains the official code for **"A Multimodal Deep Learning Framework for Symptom-Based Disease Prediction and Clinical Decision Support"**, accepted at *Neural Computing and Applications* (Springer).
+
+We propose a dual-model inference system (**AyuSeva**) that uses two complementary deep learning architectures:
 
 1. **Symptom Model** — A DenseNet + Bidirectional LSTM + Attention architecture for structured symptom-based diagnosis across 41 disease classes
 2. **NLP Model** — A CNN + Bidirectional LSTM + Attention architecture for free-text symptom description diagnosis across 55 disease classes
 
 The system runs both models simultaneously and selects the prediction with higher confidence (dual-model winner-takes-all inference). It includes calibrated probability estimates, cost-sensitive evaluation for acute conditions, and a complete deployment pipeline.
 
-### Key Features
+### Key Contributions
 
 - 🔬 **Dual-Model Inference** — Structured symptoms + free-text NLP, best-of-both approach
 - 📊 **5-Fold Stratified Cross-Validation** — Rigorous evaluation with per-fold metrics
@@ -127,7 +130,7 @@ The **Final model** (retrained on all train+val data) is recommended for product
 ## Repository Structure
 
 ```
-ayuseva/
+multimodal-disease-prediction/
 ├── README.md                      ← You are here
 ├── LICENSE                        ← MIT License
 ├── CITATION.cff                   ← Citation for the paper
@@ -166,8 +169,8 @@ ayuseva/
 ### 1. Clone & Reproduce Training
 
 ```bash
-git clone https://github.com/nameisashish/ayuseva.git
-cd ayuseva
+git clone https://github.com/nameisashish/multimodal-disease-prediction.git
+cd multimodal-disease-prediction
 ```
 
 Upload the training scripts to Google Colab with a T4 GPU:
@@ -213,9 +216,9 @@ The trained model weights are hosted on Hugging Face Spaces:
 
 ## Live Applications
 
-### 🌐 Frontend — AyuSeva Web App
+### 🌐 AyuSeva — Web Application
 
-**Live:** [ayuseva.vercel.app](https://ayuseva.vercel.app)
+**Live Demo:** [ayuseva.vercel.app](https://ayuseva.vercel.app)
 
 Interactive chatbot interface with symptom input (structured + free-text), real-time disease prediction, and AI-generated explanations via Gemini API.
 
@@ -258,19 +261,21 @@ FastAPI dual-model inference server deployed on Hugging Face Spaces.
 
 ## Citation
 
-If you use this code or models in your research, please cite:
+If you use this code or models in your research, please cite our paper:
 
 ```bibtex
-@software{kishore2026ayuseva,
-  title     = {AyuSeva: AI-Powered Medical Diagnosis Chatbot with Dual-Model Inference},
+@article{kishore2026multimodal,
+  title     = {A Multimodal Deep Learning Framework for Symptom-Based Disease Prediction and Clinical Decision Support},
   author    = {Kishore, Ashish},
+  journal   = {Neural Computing and Applications},
+  publisher = {Springer},
   year      = {2026},
-  url       = {https://github.com/nameisashish/ayuseva},
+  url       = {https://github.com/nameisashish/multimodal-disease-prediction},
   license   = {MIT}
 }
 ```
 
-> 📄 **Paper:** *Details will be updated after publication.*
+> 📄 **Paper DOI:** *Will be updated after publication.*
 
 ---
 
@@ -284,9 +289,17 @@ This project is licensed under the MIT License — see the [LICENSE](LICENSE) fi
 
 | Repository | Description |
 |------------|-------------|
-| [ayuseva-frontend](https://github.com/nameisashish/ayuseva-frontend) | Next.js web interface (deployed on Vercel) |
+| [ayuseva-frontend](https://github.com/nameisashish/ayuseva-frontend) | Next.js web interface (deployed at [ayuseva.vercel.app](https://ayuseva.vercel.app)) |
 | [ayuseva-planner](https://github.com/nameisashish/ayuseva-planner) | Streamlit health & fitness planner |
 | [medical-assistant-api](https://huggingface.co/spaces/theashish03/medical-assistant-api) | HF Spaces inference API + trained models |
+
+---
+
+## Acknowledgements
+
+- Datasets sourced from public medical symptom repositories
+- Trained on Google Colab free tier (T4 GPU)
+- Deployed on Hugging Face Spaces and Vercel
 
 ---
 
