@@ -32,7 +32,3 @@ Both **best-fold** and **final** (retrained on all train+val) models are compare
 | Wins | 2 | **10** (15 ties) |
 
 Full results: [`symptom_model/results/`](symptom_model/results/)
-
-## NLP Model
-
-> NLP stress tests not yet available — to be added in a future update.
