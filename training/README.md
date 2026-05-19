@@ -11,21 +11,21 @@ Reproduce the full training pipeline on **free Google Colab T4 GPU**.
 
 > **Important:** The dataset `symbipredict_2022.csv` is pre-balanced at 121 samples/class. **No SMOTE is needed.**
 
-| Session | Script | Runtime | Produces |
-|---------|--------|---------|----------|
+| # | Script | Runtime | Produces |
+|---|--------|---------|----------|
 | 1 | `01_symptom_model.py` | ~3-4 hrs | `final_symptom_model.keras`, `best_symptom_model.keras`, scaler, encoder |
-| 2 | `04_nlp_model.py` | ~3.5 hrs | `final_nlp_model.keras`, `best_nlp_model.keras`, tokenizer, encoder |
-| 3 | `02_symptom_ordering.py` | ~2-3 hrs | Ordering comparison (analysis only) |
-| 4 | `03_symptom_benchmarks.py` | ~2-3 hrs | GRU, TCN, MLP, RF baselines (values only) |
-| 5 | `05_nlp_benchmarks.py` | ~3 hrs | CNN, XGBoost, GRU+Attn baselines (values only) |
-| 6 | `06_generative_eval.py` | ~5 min | Clinical evaluation template (CPU ok) |
+| 2 | `03_symptom_benchmarks.py` | ~2-3 hrs | GRU, TCN, MLP, RF baselines (values only) |
+| 3 | `04_nlp_model.py` | ~3.5 hrs | `final_nlp_model.keras`, `best_nlp_model.keras`, tokenizer, encoder |
+| 4 | `05_nlp_benchmarks.py` | ~3 hrs | CNN, XGBoost, GRU+Attn baselines (values only) |
+| 5 | `06_generative_eval.py` | ~5 min | Clinical evaluation template (CPU ok) |
+| 6 | `07_symptom_deployment_prep.ipynb` | ~2-3 hrs | Production-ready `final_symptom_model.keras` (single run, no folds) |
 
-## Scripts 1 & 2 (Model Training)
+## Model Training (01, 04)
 
 These produce the saved models used in the inference API:
 
-- **Symptom Model**: DenseNet + BiLSTM + Self-Attention, 5-fold stratified CV
-- **NLP Model**: CNN + BiLSTM + Self-Attention with synonym augmentation, 5-fold stratified CV
+- **Symptom Model** (`01`): DenseNet + BiLSTM + Self-Attention, 5-fold stratified CV
+- **NLP Model** (`04`): CNN + BiLSTM + Self-Attention with synonym augmentation, 5-fold stratified CV
 
 Both scripts include:
 - 5-fold cross-validation with per-fold training curves
@@ -34,18 +34,22 @@ Both scripts include:
 - Confidence threshold sweep
 - Cost-sensitive evaluation (higher penalties for acute conditions)
 
-## Scripts 3, 4, 5 (Benchmarks)
+## Benchmarks (03, 05)
 
 Comparison against baseline architectures:
-- **Symptom**: GRU (no attention), TCN, MLP+Residual, TCN-MLP Hybrid, Random Forest
-- **NLP**: CNN (no attention), XGBoost, GRU+Attention, TextCNN+Attention
+- **Symptom** (`03`): GRU (no attention), TCN, MLP+Residual, TCN-MLP Hybrid, Random Forest
+- **NLP** (`05`): CNN (no attention), XGBoost, GRU+Attention, TextCNN+Attention
 
-## Script 6 (Generative Evaluation)
+## Generative Evaluation (06)
 
 Framework for clinical evaluation of generative responses:
-- `InterceptionLogger` — tracks prediction confidence and Gemini API hallucination rates
+- `InterceptionLogger` — tracks prediction confidence and hallucination rates
 - `generate_evaluation_template()` — creates CSV forms for doctor evaluation
 - `analyze_ratings()` — processes filled evaluation forms with inter-rater reliability
+
+## Deployment Model Prep (07)
+
+Single training run (no cross-validation) of the symptom model to produce the final deployment-ready model. Same DenseNet+BiLSTM+Attention architecture as `01`, with synthetic data expansion, augmentation, MixUp, and temperature scaling.
 
 ## Dataset Notes
 

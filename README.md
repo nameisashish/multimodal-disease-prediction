@@ -107,7 +107,6 @@ multimodal-disease-prediction/
 │
 ├── training/                      ← ML Training Pipeline
 │   ├── 01_symptom_model.py        ← Symptom model (DenseNet+BiLSTM+Attn)
-│   ├── 02_symptom_ordering.py     ← Clinical vs shuffled ordering analysis
 │   ├── 03_symptom_benchmarks.py   ← Baselines (GRU, TCN, MLP, RF)
 │   ├── 04_nlp_model.py           ← NLP model (CNN+BiLSTM+Attn)
 │   ├── 05_nlp_benchmarks.py      ← Baselines (CNN, XGBoost, GRU+Attn)
@@ -145,11 +144,11 @@ Upload the training scripts to Google Colab with a T4 GPU:
 | Script | Runtime | What It Does |
 |--------|---------|--------------|
 | `01_symptom_model.py` | ~3-4 hrs | Train symptom model, 5-fold CV, calibration |
-| `02_symptom_ordering.py` | ~2-3 hrs | Clinical vs shuffled ordering analysis |
 | `03_symptom_benchmarks.py` | ~2-3 hrs | GRU, TCN, MLP, RF baselines |
 | `04_nlp_model.py` | ~3.5 hrs | Train NLP model, 5-fold CV, calibration |
 | `05_nlp_benchmarks.py` | ~3 hrs | CNN, XGBoost, GRU+Attn baselines |
 | `06_generative_eval.py` | ~5 min | Clinical evaluation framework (CPU) |
+| `07_symptom_deployment_prep.ipynb` | ~2-3 hrs | Production deployment model (single run) |
 
 ### 2. Test the Live API
 
