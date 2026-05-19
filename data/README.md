@@ -13,7 +13,7 @@ Structured symptom-disease dataset with binary features (0/1) for 132 symptoms.
 - **Target column**: `prognosis`
 - **Known quirks**: `"Diabetes "` and `"Hypertension "` have trailing spaces in the class labels
 
-Used by: `01_symptom_model.py`, `02_symptom_ordering.py`, `03_symptom_benchmarks.py`
+Used by: `01_symptom_model.py`, `02_symptom_benchmarks.py`, `03_symptom_deployment_prep.ipynb`
 
 ## bert_train.csv
 
