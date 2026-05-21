@@ -5,8 +5,6 @@ type: software
 authors:
   - family-names: "Kishore"
     given-names: "Ashish"
-  - family-names: "Kumar"
-    given-names: "N G Girish"
 repository-code: "https://github.com/nameisashish/multimodal-disease-prediction"
 license: MIT
 keywords:
@@ -23,7 +21,5 @@ preferred-citation:
   authors:
     - family-names: "Kishore"
       given-names: "Ashish"
-    - family-names: "Kumar"
-      given-names: "N G Girish"
   journal: "Neural Computing and Applications"
   year: 2026
