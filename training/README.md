@@ -11,13 +11,13 @@ Reproduce the full training pipeline on **free Google Colab T4 GPU**.
 
 > **Important:** The dataset `symbipredict_2022.csv` is pre-balanced at 121 samples/class. **No SMOTE is needed.**
 
-| # | Script | Runtime | Produces |
-|---|--------|---------|----------|
-| 1 | `01_symptom_model.py` | ~3-4 hrs | `final_symptom_model.keras`, `best_symptom_model.keras`, scaler, encoder |
-| 2 | `02_symptom_benchmarks.py` | ~2-3 hrs | GRU, TCN, MLP, RF baselines (values only) |
-| 3 | `03_symptom_deployment_prep.ipynb` | ~2-3 hrs | Production-ready `final_symptom_model.keras` (single run) |
-| 4 | `04_nlp_model.py` | ~3.5 hrs | `final_nlp_model.keras`, `best_nlp_model.keras`, tokenizer, encoder |
-| 5 | `05_nlp_benchmarks.py` | ~3 hrs | CNN, XGBoost, GRU+Attn baselines (values only) |
+| # | File Name | Google Colab | Runtime | Produces |
+|---|-----------|--------------|---------|----------|
+| 1 | `01_symptom_model` | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/nameisashish/multimodal-disease-prediction/blob/main/training/01_symptom_model.ipynb) | ~3-4 hrs | `final_symptom_model.keras`, `best_symptom_model.keras`, scaler, encoder |
+| 2 | `02_symptom_benchmarks` | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/nameisashish/multimodal-disease-prediction/blob/main/training/02_symptom_benchmarks.ipynb) | ~2-3 hrs | GRU, TCN, MLP, RF baselines (values only) |
+| 3 | `03_symptom_deployment_prep` | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/nameisashish/multimodal-disease-prediction/blob/main/training/03_symptom_deployment_prep.ipynb) | ~2-3 hrs | Production-ready `final_symptom_model.keras` (single run) |
+| 4 | `04_nlp_model` | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/nameisashish/multimodal-disease-prediction/blob/main/training/04_nlp_model.ipynb) | ~3.5 hrs | `final_nlp_model.keras`, `best_nlp_model.keras`, tokenizer, encoder |
+| 5 | `05_nlp_benchmarks` | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/nameisashish/multimodal-disease-prediction/blob/main/training/05_nlp_benchmarks.ipynb) | ~3 hrs | CNN, XGBoost, GRU+Attn baselines (values only) |
 
 ## Symptom Model (01, 02, 03)
 

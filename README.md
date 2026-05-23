@@ -106,11 +106,15 @@ multimodal-disease-prediction/
 ├── CITATION.cff                   ← Citation for the paper
 │
 ├── training/                      ← ML Training Pipeline
-│   ├── 01_symptom_model.py        ← Symptom model (DenseNet+BiLSTM+Attn)
-│   ├── 02_symptom_benchmarks.py   ← Baselines (GRU, TCN, MLP, RF)
-│   ├── 03_symptom_deployment_prep.ipynb  ← Deployment model (single run)
-│   ├── 04_nlp_model.py           ← NLP model (CNN+BiLSTM+Attn)
-│   ├── 05_nlp_benchmarks.py      ← Baselines (CNN, XGBoost, GRU+Attn)
+│   ├── 01_symptom_model.py        ← Symptom model script (DenseNet+BiLSTM+Attn)
+│   ├── 01_symptom_model.ipynb     ← Symptom model notebook (Colab-ready)
+│   ├── 02_symptom_benchmarks.py   ← Baselines script (GRU, TCN, MLP, RF)
+│   ├── 02_symptom_benchmarks.ipynb ← Baselines notebook (Colab-ready)
+│   ├── 03_symptom_deployment_prep.ipynb  ← Deployment model notebook (single run)
+│   ├── 04_nlp_model.py           ← NLP model script (CNN+BiLSTM+Attn)
+│   ├── 04_nlp_model.ipynb        ← NLP model notebook (Colab-ready)
+│   ├── 05_nlp_benchmarks.py      ← Baselines script (CNN, XGBoost, GRU+Attn)
+│   ├── 05_nlp_benchmarks.ipynb   ← Baselines notebook (Colab-ready)
 │   └── requirements.txt
 │
 ├── data/                          ← Datasets
@@ -140,13 +144,13 @@ cd multimodal-disease-prediction
 
 Upload the training scripts to Google Colab with a T4 GPU:
 
-| Script | Runtime | What It Does |
-|--------|---------|--------------|
-| `01_symptom_model.py` | ~3-4 hrs | Train symptom model, 5-fold CV, calibration |
-| `02_symptom_benchmarks.py` | ~2-3 hrs | GRU, TCN, MLP, RF baselines |
-| `03_symptom_deployment_prep.ipynb` | ~2-3 hrs | Production deployment model (single run) |
-| `04_nlp_model.py` | ~3.5 hrs | Train NLP model, 5-fold CV, calibration |
-| `05_nlp_benchmarks.py` | ~3 hrs | CNN, XGBoost, GRU+Attn baselines |
+| Script / Notebook | Google Colab | Runtime | What It Does |
+|-------------------|--------------|---------|--------------|
+| `01_symptom_model` | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/nameisashish/multimodal-disease-prediction/blob/main/training/01_symptom_model.ipynb) | ~3-4 hrs | Train symptom model, 5-fold CV, calibration |
+| `02_symptom_benchmarks` | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/nameisashish/multimodal-disease-prediction/blob/main/training/02_symptom_benchmarks.ipynb) | ~2-3 hrs | GRU, TCN, MLP, RF baselines |
+| `03_symptom_deployment_prep` | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/nameisashish/multimodal-disease-prediction/blob/main/training/03_symptom_deployment_prep.ipynb) | ~2-3 hrs | Production deployment model (single run) |
+| `04_nlp_model` | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/nameisashish/multimodal-disease-prediction/blob/main/training/04_nlp_model.ipynb) | ~3.5 hrs | Train NLP model, 5-fold CV, calibration |
+| `05_nlp_benchmarks` | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/nameisashish/multimodal-disease-prediction/blob/main/training/05_nlp_benchmarks.ipynb) | ~3 hrs | CNN, XGBoost, GRU+Attn baselines |
 
 ### 2. Test the Live API
 
