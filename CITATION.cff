@@ -6,7 +6,7 @@ authors:
   - family-names: "Kishore"
     given-names: "Ashish"
 repository-code: "https://github.com/nameisashish/multimodal-disease-prediction"
-doi: "10.1007/s00521-026-12231-8"
+doi: "10.1007/s11042-025-20853-8"
 license: MIT
 keywords:
   - medical chatbot
@@ -26,4 +26,4 @@ preferred-citation:
   volume: 38
   issue: 481
   year: 2026
-  doi: "10.1007/s00521-026-12231-8"
+  doi: "10.1007/s11042-025-20853-8"
