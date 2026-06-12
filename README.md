@@ -232,7 +232,7 @@ If you use this code or models in your research, please cite our paper:
 ```bibtex
 @article{kishore2026multimodal,
   title     = {A Multimodal Deep Learning Framework for Symptom-Based Disease Prediction and Clinical Decision Support},
-  author    = {Kishore, Ashish},
+  author    = {Kishore, Ashish and Kumar, Girish N. G.},
   journal   = {Neural Computing and Applications},
   volume    = {38},
   number    = {481},
