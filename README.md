@@ -2,7 +2,7 @@
 
 # A Multimodal Deep Learning Framework for Symptom-Based Disease Prediction and Clinical Decision Support
 
-[![Published in NCAA](https://img.shields.io/badge/Published_in-Neural_Computing_and_Applications-blue?style=for-the-badge)](https://doi.org/PLACEHOLDER)
+[![Published in NCAA](https://img.shields.io/badge/Published_in-Neural_Computing_and_Applications-blue?style=for-the-badge)](https://doi.org/10.1007/s00521-026-12231-8)
 [![Live Demo](https://img.shields.io/badge/🌐_Live_Demo-ayuseva.vercel.app-brightgreen?style=for-the-badge)](https://ayuseva.vercel.app)
 [![API](https://img.shields.io/badge/🤗_API-Hugging_Face_Spaces-yellow?style=for-the-badge)](https://huggingface.co/spaces/theashish03/medical-assistant-api)
 [![Models](https://img.shields.io/badge/🧠_Models-Hugging_Face-orange?style=for-the-badge)](https://huggingface.co/spaces/theashish03/medical-assistant-api/tree/main/models)
@@ -234,14 +234,16 @@ If you use this code or models in your research, please cite our paper:
   title     = {A Multimodal Deep Learning Framework for Symptom-Based Disease Prediction and Clinical Decision Support},
   author    = {Kishore, Ashish},
   journal   = {Neural Computing and Applications},
-  publisher = {Springer},
+  volume    = {38},
+  number    = {481},
   year      = {2026},
-  url       = {https://github.com/nameisashish/multimodal-disease-prediction},
-  license   = {MIT}
+  publisher = {Springer},
+  doi       = {10.1007/s00521-026-12231-8},
+  url       = {https://doi.org/10.1007/s00521-026-12231-8}
 }
 ```
 
-> 📄 **Paper DOI:** *Will be updated after publication.*
+> 📄 **Paper DOI:** [10.1007/s00521-026-12231-8](https://doi.org/10.1007/s00521-026-12231-8)
 
 ---
 
